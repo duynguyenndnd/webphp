@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #00d1b2;
+    --primary-hover: #00b89c;
+    --bg-dark: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-main: #ffffff;
+    --text-dim: #999;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 15px 5%;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.search-container {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px;
+    outline: none;
+    width: 150px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), var(--bg-dark)), url('https://w0.peakpx.com/wallpaper/559/111/HD-wallpaper-inception-movie.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.hero-tag {
+    background: var(--primary-hover);
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 800;
+}
+
+.hero-meta {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-dim);
+}
+
+.rating-star { color: #f5c518; }
+
+.hero-desc {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-play {
+    background: var(--primary-color);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-info {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+/* Movie Grid */
+.container { padding: 40px 5%; }
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.section-header h2 { font-size: 1.8rem; margin: 0; }
+.section-header .line { flex-grow: 1; height: 1px; background: #333; }
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover { transform: translateY(-10px); }
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.movie-card-info h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.movie-card-meta {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+footer {
+    padding: 60px 5%;
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
